@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Theme transition styles */
+.theme-transition {
+  transition: background-color 200ms ease-in-out,
+              border-color 200ms ease-in-out,
+              color 200ms ease-in-out,
+              fill 200ms ease-in-out,
+              stroke 200ms ease-in-out;
+}
+
+/* Specific transitions for common elements */
+.theme-transition {
+  /* Headers and text */
+  h1, h2, h3, h4, h5, h6, p, span, a {
+    transition: color 200ms ease-in-out;
+  }
+
+  /* Backgrounds */
+  nav, header, main, aside, footer, div {
+    transition: background-color 200ms ease-in-out, 
+                border-color 200ms ease-in-out;
+  }
+
+  /* Form elements */
+  input, textarea, select, button {
+    transition: background-color 200ms ease-in-out,
+                border-color 200ms ease-in-out,
+                color 200ms ease-in-out;
+  }
+
+  /* SVG icons */
+  svg {
+    transition: color 200ms ease-in-out,
+                fill 200ms ease-in-out,
+                stroke 200ms ease-in-out;
+  }
+
+  /* Gradients */
+  [class*="bg-gradient"] {
+    transition: opacity 200ms ease-in-out;
+  }
+
+  /* Shadows */
+  [class*="shadow"] {
+    transition: box-shadow 200ms ease-in-out;
+  }
+
+  /* Borders */
+  [class*="border"] {
+    transition: border-color 200ms ease-in-out;
+  }
+
+  /* Ring */
+  [class*="ring"] {
+    transition: box-shadow 200ms ease-in-out;
+  }
+}
+
+/* Prevent transition on initial page load */
+.theme-transition-disabled * {
+  transition: none !important;
+}
+
+/* Smooth background transitions for gradient backgrounds */
+.bg-gradient-to-b {
+  transition: opacity 200ms ease-in-out;
+}
+
+/* Smooth transitions for backdrop blur */
+.backdrop-blur-sm {
+  transition: backdrop-filter 200ms ease-in-out;
+}
